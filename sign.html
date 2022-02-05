@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>ToDo - Sign</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <section class="sign">
+            <div class="container">
+                <div class="question">
+                    <h2>Hello, can you please write your name ?</h2>
+                    <input id="nameInput" type="text">
+                    <a id="buttonInput" onclick="enter()">Enter</a>
+                </div>
+            </div>
+        </section>
+        <script>
+    
+            function enter() {
+                const name = document.getElementById("nameInput").value;
+                if (name.length != 0) {
+                    localStorage.setItem("todoName", name);
+                    window.location.href = "index.html";
+                    var fakeTask = new Array();
+                    localStorage.setItem("task",JSON.stringify(fakeTask));
+                } else {
+                    console.log("veuillez entrer un prénom");
+                }
+            }
+
+        </script>
+    </body>
+</html>

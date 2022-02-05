@@ -1,0 +1,367 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --pcolor: #3D47AF;
+    --scolor: #0A155A;
+    --tcolor: #BBC2D8;
+    --cpcolor: #4F74FF;
+    --cscolor: #e040fb;
+}
+
+body {
+    background-color: var(--pcolor);
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    padding: 35px 30px;
+    max-width: 768px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 35px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 32px;
+}
+
+h4 {
+    color: var(--tcolor);
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+}
+
+.question {
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.question input {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    height: 50px;
+    font-size: 40px;
+    background-color: var(--pcolor);
+    border: unset;
+    border-bottom: 2px solid black;
+    color: white;
+    padding: 10px 15px;
+    padding-bottom: 16px;
+    padding-top: 16px;
+}
+
+.question input:focus{
+    background-color: var(--scolor);
+    transition-duration: 0.5s;
+}
+
+.question a{
+    font-size: 22px;
+    padding: 8px 16px;
+    color: var(--scolor);
+    background-color: white;
+    border-radius: 10px;
+    width: 140px;
+    margin: 0 auto;
+    margin-top: 24px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.question a:hover{
+    color: white;
+    background-color: var(--scolor);
+    transition-duration: 0.5s;
+}
+
+.show__cat {
+    background-color: var(--scolor);
+    padding: 0 20px;
+    height: 70px;
+    line-height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 18px;
+    box-shadow: 0px 7px 14px var(--scolor);
+    border-bottom: 2px solid var(--tcolor);
+    margin-bottom: 24px;
+    cursor: pointer;
+}
+
+.show__cat:hover{
+    background-color: white;
+    border-bottom: 2px solid var(--scolor);
+    box-shadow: 0px 7px 14px var(--scolor);
+    transition-duration: 0.5s;
+}
+
+.show__cat:hover h3 {
+    color: var(--scolor);
+    transition-duration: 0.5s;
+}
+
+.show__cat:hover .fa-plus::before{
+    color: var(--scolor);
+    transition-duration: 0.5s;
+}
+
+.show__cat:hover .fa-minus::before{
+    color: var(--scolor);
+    transition-duration: 0.5s;
+}
+
+.show__cat h3 {
+    margin-right: 16px;
+    color: var(--tcolor);
+    margin-top: 0px!important;
+}
+
+.show__cat .fa-plus::before {
+    color: var(--tcolor);
+    line-height: 70px;
+}
+
+.fa-minus::before {
+    color: var(--tcolor);
+    line-height: 70px;
+}
+
+.tdhome__catlist {
+    display: flex;
+    flex-direction: column;
+    animation-duration: 1s;
+    animation-name: fadetop;
+}
+
+text {
+    color: white;
+}
+
+.cat__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    width: 100%;
+    background-color: var(--scolor);
+    padding: 20px 20px;
+    border-radius: 20px;
+    color: var(--tcolor);
+    box-shadow: 0px 7px 14px var(--scolor);
+    animation-name: margebot;
+    animation-duration: 1s;
+}
+
+@keyframes fadetop {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 100%;
+    }
+}
+
+@keyframes margebot {
+    from {
+        margin-bottom: 64px;
+    } to {
+        margin-bottom: 16px;
+    }
+}
+
+.ct__work {
+    border-bottom: 2px solid var(--cscolor);
+}
+
+.ct__home {
+    border-bottom: 2px solid var(--cpcolor);
+}
+
+.ct__perso {
+    border-bottom: 2px solid white;
+}
+
+
+
+h3 {
+    margin-top: 8px;
+    color: white;
+}
+
+.cat__item .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cat__item .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tdhome__task{
+    margin-top: 8px;
+}
+
+.task__item {
+    display: flex;
+    padding: 20px 16px;
+    margin-bottom: 8px;
+    width: 100%;
+    border-radius: 15px;
+    background-color: var(--scolor);
+    cursor: pointer;
+    animation-name: tasklist;
+    animation-duration: 1s;
+}
+
+@keyframes tasklist {
+    from {
+        margin-bottom: 32px;
+        opacity: 0;
+    } to {
+        margin-bottom: 8px;
+        opacity: 100%;
+    }
+}
+
+.task__item:hover {
+    border-bottom: 1px solid white;
+    transition-duration: 0.5s;
+}
+
+.task__name {
+    color: var(--tcolor);
+}
+
+.button__add {
+    position: fixed;
+    bottom: 35px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background-color: var(--cscolor);
+    border-radius: 50%;
+    box-shadow: 4px 2px 55px 2px rgba(209,3,252,1);
+    cursor: pointer;
+}
+
+.button__add:hover {
+    background-color: white;
+    box-shadow: 4px 2px 55px 2px white;
+    transition-duration: 0.5s;
+}
+
+.button__add:hover i {
+    color: var(--cscolor);
+    transition-duration: 0.5s;
+}
+
+.button__add i {
+    color: white;
+}
+
+.add__task {
+    background-color: var(--cscolor);
+    height: 100vh;
+    display: none;
+}
+
+@keyframes displayadd {
+    from {
+        opacity: 0;
+        margin-bottom: 48px;
+    } to {
+        opacity: 100%;
+        margin-bottom: 24px;
+    }
+}
+
+.add__task input {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 15px;
+    font-size: 20px;
+    padding: 0 15px;
+    font-weight: 500;
+    margin-bottom: 24px;
+    animation-name: displayadd;
+    animation-duration: 1s;
+    text-align: center;
+    font-weight: 700;
+}
+
+.add__task #buttonSelect {
+    display: block;
+    width: 100%;
+    height: 40px;
+    line-height: 35px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white;
+    border: 3px solid white;
+    border-radius: 15px;
+    font-size: 20px;
+    padding: 0 15px;
+    margin-bottom: 24px;
+    animation-name: displayadd;
+    animation-duration: 1s;
+    cursor: pointer;
+}
+
+.add__task #buttonSelect:hover{
+    background-color: var(--scolor);
+    transition-duration: 0.5s;
+}
+
+.add__task #buttonEnter {
+    display: block;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 20px;
+    padding: 0 15px;
+    font-weight: 500;
+    background-color: var(--scolor);
+    animation-name: displayadd;
+    animation-duration: 1s;
+    box-shadow: 0px 2px 4px var(--scolor);
+    cursor: pointer;
+}
+
+.add__task #buttonEnter:hover{
+    background-color: white;
+    color: var(--scolor);
+    transition-duration: 0.5s;
+}
+
+.task__item i {
+    margin-right: 12px;
+}
+
+.progress-ring__circle {
+    transition: 0.35s stroke-dashoffset;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+  }
